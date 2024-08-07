@@ -1,6 +1,6 @@
 immutable_var = ("dog", "cat", 1, 2, True)
 print(immutable_var)
-#immutable_var[2] = 6 # это приводит к ошибке, т.к. я пытаюсь изменить 3-й элемент. ЗАКОММЕНТИРОВАЛ, ЧТОБЫ НЕ РУГАЛСЯ ПИТОН
+#immutable_var[2] = 6 # это приводит к ошибке, т.к. я пытаюсь изменить 3-й элемент (единичку). ЗАКОММЕНТИРОВАЛ, ЧТОБЫ НЕ РУГАЛСЯ ПИТОН
 print("Immutable tuple: ",immutable_var)
 
 mutable_list = ["dog", "cat", 1, 2, True]
