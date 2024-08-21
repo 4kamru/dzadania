@@ -1,7 +1,7 @@
 # РАСПАКОВКА
-
-def print_params(a=1, b="'строка'", c=True):
-    print(a, b, c)
+# апострофы вокруг b конечно многое меняют
+def print_params(a=1, b='строка', c=True):
+    print(f"{a} '{b}' {c}")
 
 
 print('Вызовите функцию print_params с разным количеством аргументов, включая вызов без аргументов')
@@ -12,16 +12,15 @@ print_params(40, False)
 print()  # просто отступ
 
 print('Проверьте, работают ли вызовы print_params(b = 25) print_params(c = [1,2,3])')
-print_params(b=25)
-print_params(c=[1, 2, 3])
+print_params(b = 25)
+print_params(c = [1, 2, 3])
 
 print()
 
 print('РАСПАКОВКА ПАРАМЕТРОВ')
 # типы, как в определении функции
 value_list = ['икс', False, 10]
-# а что будет? меняю местами параметры разных типов
-values_list_2 = [54.32, 'Строка']
+
 #  типы, как в определении функции
 values_dict = {'a': 20, 'b': 'игрек', 'c': False}
 # а что будет? меняю местами параметры разных типов
@@ -35,6 +34,7 @@ print_params(*value_list)
 print()
 
 print('Проверьте, работает ли print_params(*values_list_2, 42)')
+values_list_2 = [54.32, 'Строка']
 print_params(*values_list_2, 42)
 
 print()
