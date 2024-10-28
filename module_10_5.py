@@ -6,7 +6,6 @@ from datetime import datetime
 
 def read_info(name):
     all_data = []
-    time_start = datetime.now()
     with open(name, 'r', encoding='utf-8') as file:
         while True:
             # считываем строку
@@ -15,27 +14,26 @@ def read_info(name):
             # прерываем цикл, если строка пустая
             if not line:
                 break
-    time_end = datetime.now()
-    print(time_end - time_start)
     # print(all_data)
 
 # линейный вызов
 filenames = [f'./file {number}.txt' for number in range(1, 5)]
+# time_start = datetime.now()
 # for file in filenames:
 #     read_info(file)
+#
+# time_end = datetime.now()
+# print(f' Линейный вызов: {time_end - time_start}')
 
-# линейный вызов ************************************************
-# 0:00:01.365350
-# 0:00:01.343408
-# 0:00:01.339388
-# 0:00:00.136631
+# Линейный вызов: 0: 00:04.761274
+
 
 if __name__ == '__main__':
+    time_start = datetime.now()
     with Pool(processes=4) as pool:
         pool.map(read_info,filenames)
 
-# многопроцессный вызов - пока что разница несущественна
-# 0:00:00.145611
-# 0:00:01.568806
-# 0:00:01.596731
-# 0:00:01.656572
+    time_end = datetime.now()
+    print(f' Многопроцессный вызов: {time_end - time_start}')
+
+#  Многопроцессный вызов: 0:00:02.171647
