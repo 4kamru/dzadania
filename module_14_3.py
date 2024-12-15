@@ -20,7 +20,7 @@ PRICE_4 = f'Название: Product{C_4} | Описание: описание 
 
 '''
 
-api ="7228138965:AAGr2hOT6Te2FvLTpTgBXQ_xFZ-XVI95LJY"
+api =""
 bot = Bot(token=api)
 dp = Dispatcher(bot, storage=MemoryStorage())
 
