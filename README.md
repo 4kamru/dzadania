@@ -1,3 +1,5 @@
+module_16_3.py - ДЗ по теме "CRUD Запросы: Get, Post, Put Delete"
+
 module_16_2.py - ДЗ по теме "Валидация данных"
 
 module_16_1.py - ДЗ по теме "Основы Fast Api и маршрутизация"
