@@ -1,3 +1,5 @@
+module_16_4.py - ДЗ по теме "Модели данных Pydantic"
+
 module_16_3.py - ДЗ по теме "CRUD Запросы: Get, Post, Put Delete"
 
 module_16_2.py - ДЗ по теме "Валидация данных"
